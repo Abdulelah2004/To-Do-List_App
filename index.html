@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart To-Do List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="todo-app">
+      <div class="app-header">
+        <h2>To-Do List <img src="images/icon.png" alt="Icon" /></h2>
+        <div class="theme-toggle">
+          <i class="fas fa-moon"></i>
+          <label class="switch">
+            <input type="checkbox" id="theme-switch">
+            <span class="slider round"></span>
+          </label>
+          <i class="fas fa-sun"></i>
+        </div>
+      </div>
+      
+      <div class="row">
+        <input type="text" id="input-box" placeholder="Add your task..." autocomplete="off" />
+        <button id="add-btn"><i class="fas fa-plus"></i> Add</button>
+      </div>
+      
+      <div class="controls">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="search-input" placeholder="Search tasks..." />
+        </div>
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="active">Active</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+      </div>
+      
+      <div class="stats">
+        <span id="total-tasks">0 tasks</span>
+        <button id="clear-completed">Clear Completed</button>
+      </div>
+      
+      <ul id="list-container"></ul>
+      
+      <div class="empty-state">
+        <img src="images/icon.png" alt="No tasks" style="opacity: 0.5;" />
+        <p>No tasks yet. Add one above!</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
